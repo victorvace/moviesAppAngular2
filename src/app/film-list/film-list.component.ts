@@ -9,25 +9,25 @@ import { MovieDbService } from '../movie-db.service';
 export class FilmListComponent implements OnInit {
 
     films: Array < any > ;
-    titulo: String = "Listado de peliculas más vistas";
+    titulo: String = 'Listado de peliculas más vistas';
     constructor( private movieService: MovieDbService ) {}
 
     ngOnInit() {
-        console.log( "Cargado FilmList" );
+        console.log( 'Cargado FilmList' );
         this.getFilms();
     }
 
     getFilms() {
         this.movieService.getFilms().subscribe(
             result => {
-                console.log( result )
+                console.log( result );
                 this.films = result.results;
                 // console.log('Peliculas ->' + this.films);
             },
             error => {
                 console.log( error );
             }
-        )
+        );
 
     }
 }
