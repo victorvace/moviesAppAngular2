@@ -10,8 +10,6 @@ import { MovieDbService} from '../movie-db.service';
 
 export class FilmDetailsComponent implements OnInit {
 
-
-
   public film: any = {};
 
   constructor(private route: ActivatedRoute, private filmService: MovieDbService) {
@@ -20,10 +18,7 @@ export class FilmDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.getFilm();
-
-
   }
-
 
   getFilm(): void {
     console.log(this.route);

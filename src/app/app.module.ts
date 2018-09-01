@@ -14,6 +14,14 @@ import { HomeComponent } from './home/home.component';
 
 import { MovieDbService } from './movie-db.service';
 import { FilmDetailsComponent } from './film-details/film-details.component';
+import { SerieDetailsComponent } from './serie-details/serie-details.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +32,19 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
     AboutUsComponent,
     NotFoundComponent,
     HomeComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+    SerieDetailsComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [
     MovieDbService,

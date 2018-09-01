@@ -1,6 +1,7 @@
 .card{
-  min-height: 140vh;
+  min-height: 100vh;
   margin-top: 5vh;
+  max-width: 400px;
 
 }
 

@@ -1,0 +1,9 @@
+.card {
+    min-height: 100vh;
+    margin-top: 5vh;
+    max-width: 400px;
+}
+
+.card-text {
+    font-size: 2vh;
+}

@@ -3,14 +3,18 @@
 <div class="container-fluid">
   <div class="row">
     <div *ngFor="let serie of series" class="col-sm-4">
-      <div class="card center" style="width: 18rem;">
-        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{serie.poster_path}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{serie.title}}</h5>
-          <p class="card-text">{{serie.overview}}</p>
-          <a href="#" class="btn btn-primary">Ver</a>
-        </div>
-      </div>
+        <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>{{serie.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://image.tmdb.org/t/p/w500{{serie.poster_path}}" alt="{{serie.title}}">
+            <mat-card-content>
+              <p class="card-text">{{serie.overview}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button routerLink="/series/{{serie.id}}" color="primary">VER</button>
+            </mat-card-actions>
+          </mat-card>
     </div>
   </div>
 </div>
