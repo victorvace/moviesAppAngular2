@@ -5,9 +5,10 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MovieDbService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    let params = new HttpParams();
+  }
   
-  let params = new HttpParams();
   params = params.append('api_key', '81aca90227197885e3861bf1d2e1acd1');
   params = params.append('language', 'es-ES');
   
